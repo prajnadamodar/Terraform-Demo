@@ -1,1 +1,9 @@
+provider "aws"{
+    region="us-east-1"
+}
 
+module"ec2-instance"{
+    source="https://github.com/prajnadamodar/Terraform-Demo/tree/main/Module-Creation/module/ec2-instance"
+    ami_id="ami-0b6d9d3d33ba97d99"
+    instance_type="t3.micro"
+}
